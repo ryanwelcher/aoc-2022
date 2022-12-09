@@ -10,9 +10,9 @@ test('part 1 data', async () => {
 })
 
 test('part 2 example', async () => {
-  expect(part2(parseInput(await getExampleInput()))).toBe(0)
+  expect(part2(parseInput(await getExampleInput()))).toBe(70)
 })
 
 test('part 2 data', async () => {
-  expect(part2(parseInput(await getInput()))).toBe(0)
+  expect(part2(parseInput(await getInput()))).toBe(2508)
 })

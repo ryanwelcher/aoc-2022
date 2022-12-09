@@ -16,7 +16,6 @@ const tallyPriorities = (priorities) => {
   for (let i = 0; i < priorities.length; i++) {
     tally += Number(alphabet.indexOf(priorities[i])) + 1;
   }
-
   return tally;
 }
 
@@ -37,5 +36,14 @@ export const part1 = (input) => {
 }
 
 export const part2 = (input) => {
-  return
+  const priorities = [];
+  for (let i = 0; i < input.length; i += 3) {
+    for ( let j = 0; j < input[i].length; j++) {
+      if ( input[i+1].includes(input[i][j] ) && input[i+2].includes(input[i][j] ) ) {
+        priorities.push(input[i][j])
+        break;
+      }
+    }
+  }
+  return tallyPriorities(priorities);
 }
